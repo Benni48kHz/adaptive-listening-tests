@@ -1,0 +1,25 @@
+{
+	"folders": [
+      {
+         "name": "adaptive-listening-tests",
+         "path": "..\\.."
+      }
+   ],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Visual Studio",
+      "liveServer.settings.port": 81,
+      "vscode.tsc.compiler.alertOnError": "never"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "pwa-msedge",
+				"request": "launch",
+				"name": "Launch Chrome against localhost",
+				"url": "http://localhost/Visual%20Studio/adaptive-listening-tests/Hörversuche.php",
+				"webRoot": "${workspaceFolder}"
+			}
+		]
+	}
+}

@@ -1,0 +1,16 @@
+{
+   "compilerOptions": {
+      "strict": true,
+      "target": "es6",
+      "module": "es6",
+      "noImplicitAny": false,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "sourceMap": true,
+      "outDir": "js",
+      // "sourceRoot": "http://localhost/Visual%20Studio/Lauxsprecher%20Webauftritt_Build0Ver8/ts/",
+      "allowJs": true,
+      "checkJs": true,
+      "lib": ["es6","dom"]
+   }
+}

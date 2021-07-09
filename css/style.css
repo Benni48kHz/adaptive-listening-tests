@@ -1,0 +1,311 @@
+:root {
+   --colour: #152a6e;
+   --visible-content: hidden;
+   --topbar-height: 2.0em;
+   --navbar-height: 2.5em;
+}
+
+body {
+   overflow-x: hidden;
+   font-family: Tahoma, Verdana, sans-serif; /* Oswald sieht auch gut aus */
+   color: #000000;
+   position: relative;
+}
+
+.top-bar {
+   background: var(--colour);
+   height: var(--topbar-height);
+   padding: 0.2rem 0;
+   color: rgb(255, 255, 255);
+   font-size: 1rem;
+}
+
+.top-bar a {
+   color: #ffffffff;
+   /* text-decoration: none;   */
+   font-size: 1.0rem;
+}
+
+.navbar-brand img {
+   height: 2.7em;
+}
+
+.navbar {
+   height: var(--navbar-height);
+   font-size: 1.5rem;
+   font-weight: 500;
+   letter-spacing: 0.075em;
+   box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.25);
+   /* horizontal vertical blur-radius */
+   z-index: 1;
+   /* navbar and shadow on top */
+}
+
+.nav-item {
+   color: var(--colour);
+}
+
+.nav-link {
+   color: black!important;
+}
+
+.nav-link.active, .nav-link:hover {
+   color: var(--colour)!important;
+}
+
+/* [aria-current="page"] {
+  font-weight: bold;
+  background-color: #cc33ff;
+} */
+
+/*change carousel transition speed: */
+
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+   transition: transform 1.5s ease;
+}
+
+#carousel {
+   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.carousel-inner {
+   /*max-height: 38rem!important;*/
+   max-height: 45rem!important;
+}
+
+.carousel-inner img {
+   width: 100%;
+   height: 100%;
+}
+
+.carousel-caption {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+.carousel-caption h1 {
+   font-size: 600%;
+   text-shadow: 1px 1px 5px black;
+}
+
+.ci-transform {
+   position: absolute;
+   transform: scaleX(1.5);
+   transform: rotate(90deg);
+   margin-bottom: 50px;
+   margin-right: 300px;
+}
+
+/* ======== PRODUKTPALETTE KONFIGURATOR ========== */
+
+/*.carousel:hover{
+  --visible-content: visible;
+}*/
+
+/*.speaker-select { (old)
+  z-index:10;
+  /*visibility: hidden;*/
+
+/*color: white;
+  font-size: 2rem;
+  left: 0;
+  text-align: left;
+  margin-left: 1rem;
+  top: 30%;
+}*/
+
+.speaker-select {
+   position: absolute;
+   color: white;
+   text-align: left;
+   bottom: 3rem;
+   font-size: 1.5rem;
+   margin-left: 1rem;
+}
+
+.speaker-select:hover {
+   --visible-content: visible;
+}
+
+.speaker-select a {
+   text-decoration: none;
+   /*font-size: 1rem;*/
+   color: white;
+   visibility: var(--visible-content);
+}
+
+.speaker-select a:hover {
+   color: grey;
+}
+
+.selected {
+   color: var(--colour)!important;
+}
+
+.speaker-text {
+   color: black;
+   text-align: right;
+   width: 30%;
+   margin-left: 25rem;
+   margin-top: -5rem;
+   z-index: 10;
+   /*position: absolute;*/
+   display: flex;
+   justify-content: right;
+}
+
+#carousel-ht, #carousel-mt, #carousel-tt {
+   /*max-height: 30rem;*/
+}
+
+.main-text {
+   position: absolute;
+   bottom: 3rem;
+   left: 58rem;
+   -webkit-animation: fadein 2.5s;
+   /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 2.5s;
+   /* Firefox < 16 */
+   -ms-animation: fadein 2.5s;
+   /* Internet Explorer */
+   -o-animation: fadein 2.5s;
+   /* Opera < 12.1 */
+   animation: fadein 2.5s;
+}
+
+@keyframes fadein {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+/* Opera < 12.1 */
+
+@-o-keyframes fadein {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+.bg-img {
+   background-image: url('Hintergrund3.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+}
+
+.dont-show {
+   display: none;
+   transition: display 1s ease;
+}
+
+.show {}
+
+.current-speaker-model {
+   position: fixed;
+   right: 0;
+   top: 30%;
+   height: 306px;
+   width: 211px;
+   box-shadow: 0 0 5px black;
+   border-top: 3px solid beige;
+   border-left: 3px solid beige;
+   border-bottom: 3px solid beige;
+}
+
+.current-speaker-model:hover {
+   transform: scale(2) translateX(-30%);
+   border-right: 3px solid beige;
+}
+
+.current-speaker-model img {
+   max-width: 100%;
+   max-height: 100%;
+}
+
+/* ======== PRODUKTPALETTE KONFIGURATOR ENDE ========== */
+
+/*screensize */
+
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 767.98px) {}
+
+/* mobile gutter fix */
+
+.row, .container-fluid {
+   margin-left: 0px !important;
+   margin-right: 0px !important;
+}
+
+/*-- Fixed Background Image --*/
+
+.fixed-background {
+   position: relative;
+   width: 100%;
+   z-index: 1000!important;
+}
+
+.fixed-wrap {
+   clip: rect(0, auto, auto, 0);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -999 !important;
+}
+
+.fixed {
+   z-index: -999!important;
+   display: block;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+   -webkit-transform: translateZ(0);
+   transform: translateZ(0);
+   will-change: transform;
+}
